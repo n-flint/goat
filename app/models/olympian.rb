@@ -9,4 +9,13 @@ class Olympian < ApplicationRecord
   validates_presence_of :Sport
   validates_presence_of :Event
   validates_presence_of :Medal
+
+  def self.age_sort(params)
+    if params == 'youngest'
+      Olympian.order(:Age).first
+    elsif params == 'oldest'
+      Olympian.order(Age: :desc)
+    else
+    end
+  end
 end
