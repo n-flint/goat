@@ -18,4 +18,8 @@ class Olympian < ApplicationRecord
     else
     end
   end
+
+  def self.total_olympians
+    all.count
+  end
 end
