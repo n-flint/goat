@@ -14,7 +14,7 @@ class Olympian < ApplicationRecord
     if params == 'youngest'
       Olympian.order(:Age).first
     elsif params == 'oldest'
-      Olympian.order(Age: :desc)
+      Olympian.order(:Age).last
     else
     end
   end
