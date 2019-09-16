@@ -18,4 +18,20 @@ class Olympian < ApplicationRecord
     else
     end
   end
+
+  def self.total_olympians
+    all.count
+  end
+
+  def self.avg_male_weight
+    where(Sex: 'M').average(:Weight)
+  end
+
+  def self.avg_female_weight
+    where(Sex: 'F').average(:Weight)
+  end
+
+  def self.avg_age
+    average(:Age)
+  end
 end
