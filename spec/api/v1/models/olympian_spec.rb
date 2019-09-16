@@ -15,8 +15,8 @@ RSpec.describe Olympian, type: :model do
   end
 
   describe 'class methods' do
-    it '.age_sort' do
-      olympian_1 = Olympian.create(
+    before :each do
+      @olympian_1 = Olympian.create(
       Name: 'olympian_1',
       Sex: 'M',
       Age: 100,
@@ -28,7 +28,7 @@ RSpec.describe Olympian, type: :model do
       Event: 'Event 1',
       Medal: 'Medal 1'
     ),
-    olympian_2 = Olympian.create(
+    @olympian_2 = Olympian.create(
       Name: 'olympian_2',
       Sex: 'M',
       Age: 10,
@@ -40,10 +40,16 @@ RSpec.describe Olympian, type: :model do
       Event: 'Event 2',
       Medal: 'Medal 2'
     )
+    end
 
-    expect(Olympian.age_sort('youngest')).to eq(olympian_2)
+    it '.age_sort' do
+    expect(Olympian.age_sort('youngest')).to eq(@olympian_2)
     # will come back to this
-    # expect(Olympian.age_sort('oldest')).to eq(olympian_1)
+    # expect(Olympian.age_sort('oldest')).to eq(@olympian_1)
+    end
+
+    it '.total_olympians' do
+    expect(Olympian.total_olympians).to eq(2)
     end
   end
 end
