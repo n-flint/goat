@@ -8,6 +8,7 @@ RSpec.describe Olympian, type: :model do
     it {should validate_presence_of :Height}
     it {should validate_presence_of :Weight}
     it {should validate_presence_of :Team}
+    it {should validate_presence_of :Sport}
   end
 
   describe 'class methods' do
@@ -18,7 +19,8 @@ RSpec.describe Olympian, type: :model do
       Age: 100,
       Height: 150,
       Weight: 150,
-      Team: 'Team 1'
+      Team: 'Team 1',
+      Sport: 'Boxing'
       )
     @olympian_2 = Olympian.create(
       Name: 'olympian_2',
@@ -26,7 +28,8 @@ RSpec.describe Olympian, type: :model do
       Age: 200,
       Height: 150,
       Weight: 50,
-      Team: 'Team 2'
+      Team: 'Team 2',
+      Sport: 'Swimming'
     )
     @olympian_3 = Olympian.create(
       Name: 'olympian_3',
@@ -34,7 +37,8 @@ RSpec.describe Olympian, type: :model do
       Age: 100,
       Height: 150,
       Weight: 300,
-      Team: 'Team 3'
+      Team: 'Team 3',
+      Sport: 'Fencing'
     ),
     @olympian_4 = Olympian.create(
       Name: 'olympian_4',
@@ -42,7 +46,8 @@ RSpec.describe Olympian, type: :model do
       Age: 200,
       Height: 150,
       Weight: 100,
-      Team: 'Team 4'
+      Team: 'Team 4',
+      Sport: 'Weightlifting'
     )
     end
 
