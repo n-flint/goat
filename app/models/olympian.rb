@@ -5,6 +5,7 @@ class Olympian < ApplicationRecord
   validates_presence_of :Height
   validates_presence_of :Weight
   validates_presence_of :Team
+  validates_presence_of :Sport
 
   def self.age_sort(params)
     if params == 'youngest'
