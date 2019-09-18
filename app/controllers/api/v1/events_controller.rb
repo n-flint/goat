@@ -6,6 +6,8 @@ class Api::V1::EventsController < ApplicationController
     render status: 200, json: { events: events.serialize }
   end
 
-
-
+  def show
+    Event.find(params['id'].to_i)
+    require 'pry'; binding.pry
+  end
 end

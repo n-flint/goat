@@ -56,7 +56,6 @@ RSpec.describe Olympian, type: :model do
     end
 
     # it '.age_sort' do
-    #   will come back to this
     #   expect(Olympian.age_sort('youngest')).to eq(@olympian_1)
     #   expect(Olympian.age_sort('oldest')).to eq(@olympian_1)
     # end
@@ -72,6 +71,7 @@ RSpec.describe Olympian, type: :model do
     # it '.avg_female_weight' do
     #   expect(Olympian.avg_female_weight).to eq(200)
     # end
+
     # it '.avg_age' do
     #   expect(Olympian.avg_age).to eq(150)
     # end
