@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Olympians API' do
-  xit 'returns statistics about all the olympians' do
+  it 'returns statistics about all the olympians' do
     olympian_1 = Olympian.create(
       name: 'olympian_1',
       sex: 'M',
@@ -22,7 +22,7 @@ RSpec.describe 'Olympians API' do
     )
 
     get '/api/v1/olympian_stats'
-
+    
     stats = JSON.parse(response.body)
 
     expect(stats['olympian_stats']['total_competing_olympians']).to eq(2)
