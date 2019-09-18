@@ -1,20 +1,20 @@
 class Olympian < ApplicationRecord
-  validates_presence_of :Name
-  validates_presence_of :Sex
-  validates_presence_of :Age
-  validates_presence_of :Height
-  validates_presence_of :Weight
-  validates_presence_of :Team
-  validates_presence_of :Games
-  validates_presence_of :Sport
-  validates_presence_of :Event
-  validates_presence_of :Medal
+  validates_presence_of :name
+  validates_presence_of :sex
+  validates_presence_of :age
+  validates_presence_of :height
+  validates_presence_of :weight
+  validates_presence_of :team
+  validates_presence_of :sport
+
+  has_many :olympian_events
+  has_many :events, through: :olympian_events
 
   def self.age_sort(params)
     if params == 'youngest'
-      Olympian.order(:Age).first
+      Olympian.order(:age).first
     elsif params == 'oldest'
-      Olympian.order(:Age).last
+      Olympian.order(:age).last
     else
     end
   end
@@ -24,14 +24,14 @@ class Olympian < ApplicationRecord
   end
 
   def self.avg_male_weight
-    where(Sex: 'M').average(:Weight)
+    where(Sex: 'M').average(:weight)
   end
 
   def self.avg_female_weight
-    where(Sex: 'F').average(:Weight)
+    where(Sex: 'F').average(:weight)
   end
 
   def self.avg_age
-    average(:Age)
+    average(:age)
   end
 end
