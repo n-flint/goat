@@ -7,5 +7,4 @@ class Api::V1::OlympiansController < ApplicationController
     render json: Olympian.all
     end
   end
-
 end
