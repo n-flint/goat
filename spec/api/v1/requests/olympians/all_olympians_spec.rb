@@ -29,17 +29,17 @@ RSpec.describe 'Olympians API' do
     # Olympian 1
     expect(olympians[0]['name']).to eq('olympian_1')
     expect(olympians[0]['sex']).to eq('M')
-    expect(olympians[0]['age']).to eq('105')
-    expect(olympians[0]['height']).to eq('150')
-    expect(olympians[0]['weight']).to eq('50')
+    expect(olympians[0]['age']).to eq(105)
+    expect(olympians[0]['height']).to eq(150)
+    expect(olympians[0]['weight']).to eq(50)
     expect(olympians[0]['team']).to eq('Team 1')
     expect(olympians[0]['sport']).to eq('Boxing')
     # Olympian 2
     expect(olympians[1]['name']).to eq('olympian_2')
     expect(olympians[1]['sex']).to eq('M')
-    expect(olympians[1]['age']).to eq('105')
-    expect(olympians[1]['height']).to eq('150')
-    expect(olympians[1]['weight']).to eq('50')
+    expect(olympians[1]['age']).to eq(105)
+    expect(olympians[1]['height']).to eq(150)
+    expect(olympians[1]['weight']).to eq(50)
     expect(olympians[1]['team']).to eq('Team 2')
     expect(olympians[1]['sport']).to eq('Swimming')
   end

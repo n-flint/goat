@@ -27,9 +27,9 @@ RSpec.describe 'Olympians API' do
 
     expect(youngest_olympian['name']).to eq('olympian_2')
     expect(youngest_olympian['sex']).to eq('M')
-    expect(youngest_olympian['age']).to eq('10')
-    expect(youngest_olympian['height']).to eq('150')
-    expect(youngest_olympian['weight']).to eq('50')
+    expect(youngest_olympian['age']).to eq(10)
+    expect(youngest_olympian['height']).to eq(150)
+    expect(youngest_olympian['weight']).to eq(50)
     expect(youngest_olympian['team']).to eq('Team 2')
     expect(youngest_olympian['sport']).to eq('Swimming')
   end
