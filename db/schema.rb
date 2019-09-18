@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(version: 2019_09_17_191537) do
 
   create_table "olympians", force: :cascade do |t|
     t.string "name"
-    t.string "age"
+    t.integer "age"
     t.string "sex"
-    t.string "height"
-    t.string "weight"
+    t.integer "height"
+    t.integer "weight"
     t.string "team"
     t.string "sport"
     t.datetime "created_at", null: false
