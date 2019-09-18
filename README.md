@@ -5,7 +5,6 @@
 ![Alt Text](https://media.giphy.com/media/ZDu7yBPidAtIt4CxsR/giphy.gif )
 
 
-
 ## Table of Contents
 * [Description](#Description)
 * [Production](#Production)
