@@ -1,24 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe 'Olympians API' do
-  xit 'returns statistics about all the olympians' do
+  it 'returns statistics about all the olympians' do
     olympian_1 = Olympian.create(
-      Name: 'olympian_1',
-      Sex: 'M',
-      Age: 100,
-      Height: 150,
-      Weight: 50,
-      Team: 'Team 1',
-      Sport: 'Boxing'
+      name: 'olympian_1',
+      sex: 'M',
+      age: 100,
+      height: 150,
+      weight: 50,
+      team: 'Team 1',
+      sport: 'Boxing'
     ),
     olympian_2 = Olympian.create(
-      Name: 'olympian_2',
-      Sex: 'F',
-      Age: 10,
-      Height: 150,
-      Weight: 50,
-      Team: 'Team 2',
-      Sport: 'Swimming'
+      name: 'olympian_2',
+      sex: 'F',
+      age: 10,
+      height: 150,
+      weight: 50,
+      team: 'Team 2',
+      sport: 'Swimming'
     )
 
     get '/api/v1/olympian_stats'
