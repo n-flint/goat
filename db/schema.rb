@@ -10,21 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_185011) do
+ActiveRecord::Schema.define(version: 2019_09_17_191537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "olympians", force: :cascade do |t|
-    t.string "Name"
-    t.string "Age"
-    t.string "Sex"
-    t.string "Height"
-    t.string "Weight"
-    t.string "Team"
-    t.string "Sport"
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "games"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "olympian_events", force: :cascade do |t|
+    t.string "medals"
+    t.bigint "olympian_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_olympian_events_on_event_id"
+    t.index ["olympian_id"], name: "index_olympian_events_on_olympian_id"
+  end
+
+  create_table "olympians", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "sex"
+    t.string "height"
+    t.string "weight"
+    t.string "team"
+    t.string "sport"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "olympian_events", "events"
+  add_foreign_key "olympian_events", "olympians"
 end
