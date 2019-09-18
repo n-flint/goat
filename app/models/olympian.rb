@@ -24,14 +24,18 @@ class Olympian < ApplicationRecord
   end
 
   def self.avg_male_weight
-    where(Sex: 'M').average(:weight)
+    where(sex: 'M').average(:weight)
   end
 
   def self.avg_female_weight
-    where(Sex: 'F').average(:weight)
+    where(sex: 'F').average(:weight)
   end
 
   def self.avg_age
     average(:age)
+  end
+
+  def self.find_sports
+    pluck(:sport).uniq
   end
 end

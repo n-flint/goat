@@ -25,10 +25,10 @@
 
 ## Description
 
-G.O.A.T. (Greatest Olympic Analytics Tracker), is a JSON API that provides information about olympians from the 2016 summer games. 
+G.O.A.T. (Greatest Olympic Analytics Tracker), is a JSON API that provides information about olympians from the 2016 summer games. This is a mock technical challenge provided to MOD 4 students at Turing.
 
 ## Production
-Link Coming Soon
+  - [G.O.A.T.](https://goatness.herokuapp.com/)
 
 ## Project Board
   - [G.O.A.T. Project Board](https://github.com/n-flint/goat/projects/1)
@@ -262,19 +262,19 @@ body:
 ---
 
 ## Database Schema
-<img width="607" alt="goat_db_schema" src="https://user-images.githubusercontent.com/34421236/64912521-e3442d00-d6ed-11e9-9ab8-1bac652ddc8f.png">
+<img width="985" alt="Screen Shot 2019-09-18 at 9 45 13 AM" src="https://user-images.githubusercontent.com/34421236/65163896-11c94d00-d9f9-11e9-8058-8edba6b88170.png">
 
 ## Challenges
-Coming Soon....
+When I originally started this project, I did not setup my DB correctly, and had to go back and change/add/remove tables.
 
 ## Successes
-Coming Soon....
+Being able to fix the database with migrations, and not just deleting the whole thing and making another. 
 
 ## Extensions
-Coming Soon....
+Search all olympians by age, weight, height etc.
 
 ## Known Issues
-Coming Soon....
+Olympian Statistics test does not work, It has something to do with postgres I believe.
 
 ## Developers
 
