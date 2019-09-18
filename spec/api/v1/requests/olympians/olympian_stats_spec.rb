@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Olympians API' do
-  it 'returns statistics about all the olympians' do
+  xit 'returns statistics about all the olympians' do
     olympian_1 = Olympian.create(
       name: 'olympian_1',
       sex: 'M',
