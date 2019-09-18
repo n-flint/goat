@@ -2,9 +2,8 @@
 
 <h3 align="center">The Greatest Olympic Analytics Tracker </h3>
 
-<div style="text-align:center" markdown="1">
 ![Alt Text](https://media.giphy.com/media/ZDu7yBPidAtIt4CxsR/giphy.gif )
-</div>
+
 
 
 ## Table of Contents
